@@ -56,11 +56,11 @@
         {{article.id}}
         {{article.name}}
         {{article.description}}
-         <b-button variant="warning"  class="mr-2">
+         <b-button variant="warning" @click="loadCategory()" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
           <b-button variant="danger">
-            <i class="fa fa-trash"></i>
+            <i class="fa fa-trash" @click="loadUser('remove')"></i>
         </b-button>
 
       </div>
