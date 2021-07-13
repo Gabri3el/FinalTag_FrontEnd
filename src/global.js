@@ -1,7 +1,7 @@
 import Vue from "vue"
 
 export const userKey = "__FinalTagUser"
-export const baseApiUrl = "https://tagfinalbackend.herokuapp.com/"
+export const baseApiUrl = "https://tagfinalbackend.herokuapp.com"
 
 export function showError(e){
     if(e && e.response && e.response.data){
