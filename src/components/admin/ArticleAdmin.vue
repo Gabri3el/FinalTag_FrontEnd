@@ -56,7 +56,7 @@
         {{article.id}}
         {{article.name}}
         {{article.description}}
-         <b-button variant="warning" @click="loadArticle()" class="mr-2">
+         <b-button variant="warning" @click="loadArticle(article.id)" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
           <b-button variant="danger">
@@ -131,7 +131,7 @@ components:{VueEditor},
       },
       loadArticle(article, mode= 'save'){
         this.mode = mode
-        Axios.get(`${baseApiUrl}/articles/${articles.id}`)
+        Axios.get(`${baseApiUrl}/articles/${article.id}`)
           .then(res => this.article = res.data)
       },
       loadCategories(){
