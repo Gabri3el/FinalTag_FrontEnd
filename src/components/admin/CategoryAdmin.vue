@@ -24,13 +24,14 @@
 
       </b-form>
       <b-table hover striped :items="categories" :fields="fields">
-          <b-button variant="warning"  class="mr-2">
+        <template slot="actions" v-slot="data">
+          <b-button variant="warning" @click="loadCategory(data.item)" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
-          <b-button variant="danger">
+          <b-button variant="danger" @click="loadCategory(data.item, 'remove')">
             <i class="fa fa-trash"></i>
           </b-button>
-        
+        </template>
       </b-table>
   </div>
 </template>

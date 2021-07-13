@@ -52,7 +52,7 @@
 
       </b-form>
       <b-table hover striped :items="articles" :fields="fields">
-        <template slot="actions" slot-scope="data">
+        <template slot="actions" v-slot:default="data">
           <b-button variant="warning" @click="loadArticle(data.item)" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
