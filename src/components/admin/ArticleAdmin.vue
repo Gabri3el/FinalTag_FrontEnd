@@ -54,16 +54,15 @@
 
       <div v-for="article in articles" :key="article.id">
         {{articles.id}}
-      </div>
-      <b-table hover striped :items="articles" :fields="fields">
-          <b-button variant="warning"  class="mr-2">
+         <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
           <b-button variant="danger">
             <i class="fa fa-trash"></i>
-          </b-button>
-      </b-table>
+        </b-button>
 
+      </div>
+      
       <b-pagination size="md" v-model="page" :total-rows="count" :per-page="limit" />
   </div>
 </template>
