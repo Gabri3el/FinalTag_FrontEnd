@@ -51,15 +51,14 @@
       <b-button class="ml-2" @click="reset">Cancelar</b-button>
 
       </b-form>
+
       <b-table hover striped :items="articles" :fields="fields">
-        <template slot="actions" v-slot:default="data">
-          <b-button variant="warning" @click="loadArticle(data.item)" class="mr-2">
+          <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
-          <b-button variant="danger" @click="loadArticle(data.item, 'remove')">
+          <b-button variant="danger">
             <i class="fa fa-trash"></i>
           </b-button>
-        </template>
       </b-table>
 
       <b-pagination size="md" v-model="page" :total-rows="count" :per-page="limit" />
