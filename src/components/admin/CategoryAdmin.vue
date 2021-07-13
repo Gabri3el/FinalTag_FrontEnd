@@ -24,7 +24,7 @@
 
       </b-form>
       <b-table hover striped :items="categories" :fields="fields">
-        <template slot="actions" slot-scope="data">
+        <template slot="actions" v-slot="data">
           <b-button variant="warning" @click="loadCategory(data.item)" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
@@ -71,9 +71,10 @@ export default {
         this.loadcategories()
       },
       save(){
+        const url = `${baseApiUrl}/categories`
         const method = this.category.id ? 'put' : 'post'
         const id = this.category.id ? `/${this.category.id}` : ''
-        Axios[method](`${baseApiUrl}/categories${id}`, this.category)
+        Axios[method](`${url}${id}`, this.category)
           .then(()=>{
             this.$toasted.global.defaultSuccess()
             this.reset()

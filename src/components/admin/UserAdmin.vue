@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import {baseApiUrl,showError,userKey} from '@/global'
+import {baseApiUrl,showError} from '@/global'
 import Axios from 'axios'
 
 export default {

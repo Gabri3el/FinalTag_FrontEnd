@@ -43,7 +43,7 @@ export default {
 			}
 			const res = await Axios.post(`${baseApiUrl}/validateToken`,userData)
 			if(res.data){
-				this.$store.commit('setUser',userData)
+				await this.$store.commit('setUser',userData)
 			}else{
 				localStorage.removeItem(userKey)
 				this.$router.push({name: ''})

@@ -157,7 +157,8 @@ components:{VueEditor},
     mounted(){
       this.loadUser();
       this.loadCategories();
-      this.loadArticles()
+    this.loadArticles()
+     
     }
 }
 </script>
