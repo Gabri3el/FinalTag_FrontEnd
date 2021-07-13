@@ -52,6 +52,9 @@
 
       </b-form>
 
+      <div v-for="article in articles" :key="article.id">
+        {{articles.id}}
+      </div>
       <b-table hover striped :items="articles" :fields="fields">
           <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
