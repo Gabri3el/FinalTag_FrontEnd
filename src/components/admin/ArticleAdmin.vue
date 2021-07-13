@@ -131,7 +131,7 @@ components:{VueEditor},
       },
       loadArticle(article, mode= 'save'){
         this.mode = mode
-        Axios.get(`${baseApiUrl}/articles/${article.id}`)
+        Axios.get(`${baseApiUrl}/articles/${articles.id}`)
           .then(res => this.article = res.data)
       },
       loadCategories(){
