@@ -53,7 +53,7 @@
       </b-form>
 
       <div v-for="article in articles" :key="article.id">
-        {{articles.id}}
+        {{article.id}}
          <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
