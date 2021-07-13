@@ -5,11 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
+    "express": "^4.17.1",
     "font-awesome": "4.7.0",
     "highlightjs": "9.10.0",
     "liquor-tree": "0.2.32",
