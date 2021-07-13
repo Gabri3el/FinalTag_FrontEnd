@@ -24,14 +24,13 @@
 
       </b-form>
       <b-table hover striped :items="categories" :fields="fields">
-        <template slot="actions" >
           <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
           <b-button variant="danger">
             <i class="fa fa-trash"></i>
           </b-button>
-        </template>
+        
       </b-table>
   </div>
 </template>
