@@ -1,0 +1,11 @@
+@import './assets/scss/formatation';
+
+body{
+	@include formatationMarginPadding
+}
+#app{
+	@include layoutOfPage
+}
+#app.hideMenu{
+	@include LayoutOfMenuAside
+}

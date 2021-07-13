@@ -1,0 +1,62 @@
+<template>
+    <div class="articleItem">
+        <router-link :to="{ name: 'ArticleById', params: {id: article.id}}">
+            <div class="articleItemImage" d-none d-sm-block>
+                <img v-if="article.imageUrl" :src="article.imageUrl" height="150" width="150" alt="Article Image">
+                <img v-else src="@/assets/images/article.png" height="150" width="150" alt="Article Image">
+            </div>
+            <div class="articleItemInfo">
+                <h2>{{article.name}}</h2>
+                <p>{{article.description}}</p>
+                <span><cite>Autor: {{article.Author}} </cite></span>
+            </div>
+        </router-link>
+    </div>
+</template>
+
+<script>
+export default {
+    name:'ArticleItem',
+    props:['article']
+}
+</script>
+
+<style>
+    .articleItem{
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    }
+    .articleItem a{
+        display: flex;
+        align-items: flex-start;
+        text-decoration: none;
+        color: #000;
+    }
+    .articleItemInfo h2{
+        font-size: 1.7rem;
+    } 
+    .articleItemImage{
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid #AAA;
+    }
+
+    .articleItemImage img{
+        border-radius: 20px;
+    }
+
+    .articleItemInfo{
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
+    }
+    .articleItemInfo p{
+        flex: 1;
+        color: #555;
+        font-size: 1.1rem;
+    }
+</style>
