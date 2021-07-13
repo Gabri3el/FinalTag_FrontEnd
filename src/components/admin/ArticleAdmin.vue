@@ -54,6 +54,8 @@
 
       <div v-for="article in articles" :key="article.id">
         {{article.id}}
+        {{article.name}}
+        {{article.description}}
          <b-button variant="warning"  class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
