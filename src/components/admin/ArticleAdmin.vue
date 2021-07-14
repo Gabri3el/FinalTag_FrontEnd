@@ -56,7 +56,7 @@
         {{article.id}}
         {{article.name}}
         {{article.description}}
-         <b-button variant="warning" @click="loadArticle(article.id)" class="mr-2">
+         <b-button variant="warning" @click="loadArticle(id)" class="mr-2">
             <i class="fa fa-pencil"></i>
           </b-button>
           <b-button variant="danger">
